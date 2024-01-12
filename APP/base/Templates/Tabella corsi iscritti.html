@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina di Successo</title>
+</head>
+<body>
+    <h1>Iscrizione al corso avvenuta con successo!</h1>
+
+    <p>Matricola dell'utente: {{ matricola }}</p>
+    <p>Nome del corso: {{ nome_corso }}</p>
+
+    <a href="{{ url_for('utente') }}">Torna indietro</a>
+</body>
+</html>

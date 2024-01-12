@@ -1,0 +1,21 @@
+<h1>Università Degli Studi di Cosenza</h1>
+<h2>Tabella utenti registrati</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Matricola</th>
+            <th>E-mail</th>
+            <th>online</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for utenti in utentiDetails %}
+        <tr>
+            <td>{{ utenti[0] }}</td>
+            <td>{{ utenti[1] }}</td>
+            <td>{{ utenti[3] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<p><a href="/">Home</a></p>

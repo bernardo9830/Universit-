@@ -1,0 +1,11 @@
+In questo progetto abbiamo creato il database university composto da varie tabelle. Quelle utilizzate sono utenti, corso, insegnanti
+
+Il progetto vuole rappresentare un semplicissimo sito web con alcune funzionalità tipiche di un sito per l'università. L'hompage basica contiene una sezione di login e due sezioni di registrazione,
+per distinguere registrazione insegnante da alunno.
+Una volta registrati vediamo una tabella con il nome e alcuni dati degli utenti registrati tra cui lo status di attività: Y= online, N=offline
+Quando ci si logga lo stato di attività viene settato su Y mentre quando si fa il logout su N.
+
+La sezione richiedi nuove credenziali permette di aggiornare i nostri dati. Cancella account ci permette invece di cancellare il proprio account(immaginare una rinuncia agli studi)
+La sezione corsi ci permette di visualizzare i corsi disponibili. Inoltre ci si può iscrivere ad uno di questi corsi e poi verificare la propria iscrizione andando a vedere la tabella dei corsi a cui si è iscritti.
+
+La sezione insegnanti invece permette di accedere come insegnante o registrarsi come insegnante.

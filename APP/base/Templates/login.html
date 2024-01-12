@@ -1,0 +1,84 @@
+<h1>Università degli studi di Cosenza</h1>
+<h2>Log-in</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il tuo Titolo</title>
+
+    <!-- Collegamento al file CSS di Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Se necessario, collegamento al file JavaScript di Bootstrap -->
+    <!-- Assicurati di includerlo dopo jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<script>
+    function toggleFields() {
+        var ruolo = document.getElementById("ruolo").value;
+        var studenteFields = document.getElementById("studente-fields");
+        var insegnanteFields = document.getElementById("insegnante-fields");
+
+        if (ruolo === "studente") {
+            studenteFields.style.display = "block";
+            insegnanteFields.style.display = "none";
+        } else if (ruolo === "insegnante") {
+            studenteFields.style.display = "none";
+            insegnanteFields.style.display = "block";
+        }
+    }
+</script>
+<form method="post" action="/login">
+    <!-- Aggiungi i campi esistenti -->
+    <label for="ruolo">Ruolo:</label>
+    <select name="ruolo" id="ruolo" class="form-control" onchange="toggleFields()">
+        <option value="studente">Studente</option>
+        <option value="insegnante">Insegnante</option>
+    </select>
+
+    <!-- Campi per gli studenti -->
+    <div id="studente-fields" class="form-group">
+        <label for="matricola">Matricola:</label>
+        <input type="text" name="matricola" id="matricola" class="form-control">
+        <label for="password">Password:</label>
+        <input type="password" name="password"  class="form-control">
+    </div>
+
+    <!-- Campi per gli insegnanti -->
+    <div id="insegnante-fields" class="form-group" style="display:none;">
+        <label for="email_insegnante">Email Insegnante:</label>
+        <input type="text" name="email_insegnante" id="email_insegnante" class="form-control">
+
+        <label for="password_insegnante">Password Insegnante:</label>
+        <input type="password" name="password_insegnante" id="password_insegnante" class="form-control">
+    </div>
+
+<!--    <label for="password">Password:</label>-->
+<!--    <input type="password" name="password" id="password" class="form-control">-->
+
+    <input type="submit" value="Login" class="btn btn-primary">
+</form>
+<body>
+<!--<form method = "POST" action="">-->
+<!--    Email<input type="email" name="email">-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    Password<input type="password" name="password">-->
+<!--    <br>-->
+<!--    <br>-->
+<!--     <label for="ruolo">Ruolo:</label>-->
+<!--    <select name="ruolo" id="ruolo">-->
+<!--        <option value="studente">Studente</option>-->
+<!--        <option value="insegnante">Insegnante</option>-->
+<!--    </select>-->
+<!--    <input type="submit" value="Login">-->
+<!--&lt;!&ndash;    <input type="submit">&ndash;&gt;-->
+<!--</form>-->
+<!--<p><a href="/">Home</a></p>-->
+
+
+
+
+

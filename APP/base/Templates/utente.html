@@ -1,0 +1,163 @@
+<h1>Università Degli Studi di Cosenza</h1>
+<h2>Tabella utente loggato</h2>
+<table border = 1>
+    <thead>
+    <tr>
+        <th>Matricola</th>
+        <th>E-mail</th>
+        <th>Online</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{matricola}}</td>
+        <td>{{email}}</td>
+        <td>{{online}}</td>
+
+
+    </tr>
+    </tbody>
+
+</table>
+
+<p><a href="/">Home</a> </p>
+<p><a href="/logout">Logout</a> </p>
+<p><a href="/corsi">Corsi</a>  </p>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example</title>
+    <!-- Add Bootstrap links here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!-- Button to trigger the modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Aggiorna credenziali
+    </button>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Aggiorna credenziali</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form action="/richiedi_nuove_credenziali" method="post">
+                        <div class="form-group">
+                            <label for="matricola_attuale">Matricola Attuale:</label>
+                            <input type="text" class="form-control" id="matricola_attuale", name="matricola_attuale">
+                        </div>
+                        <div class="form-group">
+                            <label for="email_studente">email:</label>
+                            <input type="email_studente" class="form-control" id="email_studente", name="email_studente">
+                        </div>
+                         <div class="form-group">
+                            <label for="nuova email">Nuova email:</label>
+                            <input type="nuova email" class="form-control" id="nuova email", name="nuova email">
+                        </div>
+                        <div class="form-group">
+                            <label for="nuova_Matricola">Nuova Matricola:</label>
+                            <input type="text" class="form-control" id="nuova_Matricola", name="nuova_Matricola">
+
+                        </div>
+                        <input type="submit" value="Salva">
+
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+<!--                    <input type="submit" value="Salva">-->
+<!--                    <button type="button" class="btn btn-primary">Salva</button>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modale Cancellazione</title>
+    <!-- Aggiungi i link a Bootstrap qui -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Bottone per aprire la modale -->
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modaleCancellazione">
+    Cancella Account
+</button>
+
+<!-- Modale di conferma cancellazione -->
+<div class="modal" id="modaleCancellazione">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modale Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Conferma Cancellazione</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modale Body -->
+            <div class="modal-body">
+                <form action="/cancella" method="post">
+                    <p>Inserisci la tua password per confermare la cancellazione dell'account:</p>
+                    <div class="form-group">
+                         <input type="password" id="passwordCancellazione" name="passwordCancellazione" class="form-control" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Conferma Cancellazione</button>
+                </form>
+            </div>
+
+
+
+
+            <!-- Modale Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
